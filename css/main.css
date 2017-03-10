@@ -1,0 +1,57 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+ tbody { display: block; }
+tbody {
+     height:292px;     /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+.hidden {
+        display: none;
+}
+   .visible {
+        display: block;
+   }
+/*.container {
+    border-style: solid;
+    border-width: 5px;
+   
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
