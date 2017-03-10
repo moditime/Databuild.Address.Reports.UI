@@ -1,7 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html ng-app="repo">
 
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Databuild Address Reports</title>
@@ -11,64 +12,41 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
+
+ 
 </head>
-
-<body>
-  <br><br><br><br><br><br><br><br>
-  <div class="container" id="me">
-
-    <div class="row">
-      <div class="col-md-12">
-<br><br><br><br><br><br><br><br>
-        <form>
-          <fieldset>
-            <legend>Company and Project Address Reports:</legend>
-            <button type="button" class="btn btn-primary" id='showcompany'>Show Companies</button>
-            <button type="button" class="btn btn-primary" id='showproject'>Show Projects</button><br><br>
-          </fieldset>
-        </form>
-
-        <div id="companies">
-          <h4>Companies sharing same Addresses</h4>
-          <div id="table-company"></div>
-        </div>
-
-        <div id="projects">
-          <h4>Project sharing same Addresses</h4>
-          <div id="table-project"></div>
-        </div>
-
-      
-           <div id="company-list"><br>
-
-        <h4>List of Companies sharing the exact same address: </h4>
-          
-          <div id="table-company1"></div>
-          <br><p><button type="button" class="btn btn-primary" id='clear'>Remove the List</button></p>
-        </div>
+<body  class="container" >
 
 
-           <div id="Project-list"><br>
-
-        <h4>List of Projects sharing the exact same address: </h4>
-          
-          <div id="table-project-list"></div>
-          <br><p><button type="button" class="btn btn-primary" id='clear-proj'>Remove the List</button></p>
-        </div>
-               
-<br><br><br><br><br><br><br><br>
-          
-      </div>
-    </div>
 
 
-  </div>
+<div >
+<h1>Company and Project Address Reports:</h1><br><br>
 
-  <!-- /container --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+          <hr>    <a ui-sref="show.companies" class="btn btn-primary btn-lg " >Show Companies</a>
+          <a ui-sref="show.projects" class="btn btn-primary btn-lg" >Show Projects</a>
+            <br><br>
 
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+<ui-view></ui-view>
+
+</div>
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+       <script src="js/vendor/bootstrap.min.js"></script>
+   <script src="src/app.js"></script>
+   <script src="src/modules/company/controllers/company.controller.js"></script>
+  
+
+    <script src="src/modules/project/controllers/project.controller.js"></script>
+   <script src="src/modules/company/controllers/CompanyListCtrl.js"></script>
+   <script src="src/modules/project/controllers/ProjectListCtrl.js"></script>
+  <script src="src/modules/company/services/addresses.company.service.js"></script>
+  
+    <script src="src/modules/project/services/addresses.project.service.js"></script>
+    
 </body>
 
-</html>
+</html>   
