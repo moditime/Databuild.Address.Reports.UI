@@ -1,0 +1,14 @@
+
+ <h3 align="center"><span class="badge">{{count}}</span> Projects with this address  <small><span class="badge" >{{address}}</span></small><a ui-sref="show.export" class="btn btn-primary btn-lg pull-right" ng-click="exportProjects()">Export</a></h3><br>
+<table >
+       <thead>
+                            <tr>
+                                <th>Project ID</th>
+                                <th>Company Name</th>
+                            </tr>
+                        </thead>
+  <tr ng-repeat="x in projects">
+    <td>{{ x.Id }}</td>
+    <td>{{ x.Name }}</td>
+  </tr>
+</table>

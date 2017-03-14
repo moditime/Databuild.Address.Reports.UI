@@ -1,0 +1,14 @@
+
+  <h3 align="center"><span class="badge">{{count}}</span> Companies with this address  <small><span class="badge" >{{address}}</span></small><a  class="btn btn-primary btn-lg pull-right" ng-click="exportCompanies()">Export</a></h3> <br>
+<table >
+       <thead>
+                            <tr>
+                                <th>Company ID</th>
+                                <th>Company Name</th>
+                            </tr>
+                        </thead>
+  <tr ng-repeat="x in companies">
+    <td>{{ x.Id }}</td>
+    <td>{{ x.Name }}</td>
+  </tr>
+</table>

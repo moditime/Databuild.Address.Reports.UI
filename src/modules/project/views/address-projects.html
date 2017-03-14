@@ -1,0 +1,23 @@
+
+<h1 align="center">{{title}}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>{{no}} </th>
+            <th>{{add}}</th>
+            <th>{{det}}</th>
+            <th>{{act}}</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="x in project">
+        <td>{{ x.count }}</td>
+        <td>{{ x.fulladdress }}</td>
+        <td><button type="button" class="btn btn-primary btn-lg " ng-click="showProjectsThatShareThisAddress(x.address,x.count)">Show</button></td>
+        <td><button type="button" class="btn btn-danger btn-lg " ng-click="DeleteProjectsThatShareThisAddress(x)" ng-if="!x.isDeleted">Delete</button>
+        <img src="img/done.png" alt="not_done" style="width:38px;height:38px;" id="done" ng-if="x.isDeleted">
+        
+        
+        </td>
+
+    </tr>
+</table>
